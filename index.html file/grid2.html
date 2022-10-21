@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        :root{
+            --main-radiu:var(--main-radiu)5px;
+            --main-paddin:var(--main-paddin)5px;
+        }
+        .container{
+            display: grid;
+            height: 100vh;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+            grid-template-areas: "nav nav nav nav "
+            "sidebar main main main"
+            "sidebar content1 content2 content3"
+            "sidebar footer footer footer";
+            gap: 0.2cm;
+            font-family: sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #121212;
+            text-align: center;
+        }
+        nav{
+            background-color: aliceblue;
+            grid-area: nav;
+            border-radius: var(--main-radiu);
+            padding-top: var(--main-paddin);
+        }
+        main{
+            background-color: antiquewhite;
+            grid-area: main;
+            border-radius: var(--main-radiu);
+            padding-top: var(--main-paddin);
+        }
+        #sidebar{
+            background-color: aqua;
+            grid-area: sidebar;
+            border-radius: var(--main-radiu);
+            padding-top: var(--main-paddin); border-radius: var(--main-radiu);
+            padding-top: var(--main-paddin);
+        }
+        #content1{
+            background-color: aquamarine;
+            grid-area: content1;
+            border-radius: var(--main-radiu);
+            padding-top: var(--main-paddin);
+        }
+        #content2{
+            background-color: azure;
+            grid-area: content2;
+            border-radius: var(--main-radiu);
+            padding-top: var(--main-paddin);
+        }
+        #content3{
+            background-color: beige;
+            grid-area: content3;
+            border-radius: var(--main-radiu);
+            padding-top: var(--main-paddin);
+        }
+        footer{
+            background-color: #cccccc;
+            grid-area: footer;
+            border-radius: var(--main-radiu);
+            padding-top: var(--main-paddin);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <nav>Scope and Meaningof gogernment</nav>
+        <main>main</main>
+        <div id="sidebar">sidebar</div>
+        <div id="content1">content1</div>
+        <div id="content2">content2</div>
+        <div id="content3">content3</div>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
